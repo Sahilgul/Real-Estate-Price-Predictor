@@ -10,7 +10,7 @@ data = pd.read_csv('aLL_location.csv')
 pipe = pickle.load(open('pipe.pkl','rb'))
 
 
-@app.route('/')
+@app.route('//')
 def index():
     locations = data['location'].unique()
     return render_template('web.html',locations=locations)
