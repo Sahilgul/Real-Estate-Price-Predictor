@@ -1,0 +1,91 @@
+body {
+    background: url(img.jpg);
+
+}
+
+.title {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    font-size: medium;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    border: 5px solid rgb(22, 22, 20);
+    padding: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: rgb(189, 120, 31);
+}
+
+.column {
+    text-align: center;
+    margin-top: 20px;
+    font-size: large;
+    margin-left: 12%;
+    margin-right: 13%;
+    float: left;
+    padding: 10px;
+    height: 70px;
+    width: 22%;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    align-items: center;
+    text-align: center;
+    margin-top: 70px;
+    font-size: x-large;
+    width: 200px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid rgb(22, 22, 20);
+    background-color: rgb(189, 120, 31);
+
+    color: rgb(0, 0, 0);
+}
+
+.BOx_control {
+    width: 130%;
+    height: 60px;
+
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(65, 64, 61);
+    color: rgb(245, 245, 245);
+    font-size: x-large;
+}
+
+.radio {
+    background-color: rgb(65, 64, 61);
+    height: 70px;
+    width: 130%;
+    display: flex;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.radio input {
+    width: 20px;
+    margin-left: 34px;
+}
+
+.result_space {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: rgb(65, 64, 61);
+    color: rgb(255, 255, 255);
+    font-size: large;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 8%;
+    border: 1px solid rgb(22, 22, 20);
+}
