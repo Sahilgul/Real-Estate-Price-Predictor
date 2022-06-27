@@ -1,6 +1,6 @@
 body {
     background: url(img.jpg);
-
+    background-size: 100% 100%;
 }
 
 .title {
