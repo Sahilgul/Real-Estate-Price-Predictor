@@ -1,6 +1,8 @@
 body {
     background: url(img.jpg);
-    background-size: 100% 100%;
+     width: 200px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .title {
