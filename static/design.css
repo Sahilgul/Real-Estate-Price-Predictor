@@ -1,6 +1,7 @@
 body {
     background: url(img.jpg);
-background-size: 100% 100%;
+    background-size: 100% 131%;
+    background-repeat: no-repeat;
 }
 
 .title {
@@ -30,6 +31,11 @@ h1 {
     height: 70px;
     width: 22%;
 
+}
+
+.label {
+    color: rgb(255, 255, 255);
+    background-color: rgb(65, 64, 61);
 }
 
 .row:after {
@@ -88,4 +94,33 @@ h1 {
     margin-right: 30%;
     height: 8%;
     border: 1px solid rgb(22, 22, 20);
+}
+
+.footer {
+    text-align: right;
+    margin-top: 1px;
+    color: rgb(255, 255, 255);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.github {
+    margin-left: 90%;
+}
+
+a:link,
+a:visited {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    background-color: rgb(37, 63, 179);
 }
