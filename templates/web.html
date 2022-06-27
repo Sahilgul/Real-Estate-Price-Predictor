@@ -4,6 +4,9 @@
 <head>
     <title>Real State Price Predictor</title>
     <link rel="stylesheet" href="static/design.css">
+    <div class="github">
+        <a href="https://github.com/Sahilgul/Real-Estate-Price-Predictor" target="_blank">Github Code</a>
+    </div>
 </head>
 
 <body>
@@ -14,7 +17,7 @@
         </div>
         <div class="row">
             <div class="column">
-                <label><b>Select Location</b></label>
+                <label class="label"><b>Select Location</b></label>
                 <div>
                     <select class="BOx_control" id="location" name="location" required="1">
                         {% for location in locations%}
@@ -27,32 +30,31 @@
 
 
             <div class="column">
-                <label><b>Enter Bedroom</b></label>
+                <label class="label"><b>Enter No of Bedroom</b></label>
                 <div class="radio">
                     <input type="radio" id="radio-bhk-1" name="mbhk" value="1">1
                     <input type="radio" id="radio-bhk-2" name="mbhk" value="2" checked>2
                     <input type="radio" id="radio-bhk-3" name="mbhk" value="3">3
                     <input type="radio" id="radio-bhk-4" name="mbhk" value="4">4
                     <input type="radio" id="radio-bhk-5" name="mbhk" value="5">5
-                    <!-- <input type="text" class="BOx_control" id="bhk" name="bhk" placeholder="Enter Bedroom"></input> -->
                 </div>
             </div>
 
             <div>
                 <div class="column">
-                    <label><b>Enter No of Bathrooms</b></label>
+                    <label class="label"><b>Enter No of Bathrooms</b></label>
                     <div class="radio">
                         <input type="radio" id="radio-bath-1" name="nbath" value="1">1
                         <input type="radio" id="radio-bath-2" name="nbath" value="2">2
                         <input type="radio" id="radio-bath-3" name="nbath" value="3" checked>3
                         <input type="radio" id="radio-bath-4" name="nbath" value="4">4
                         <input type="radio" id="radio-bath-5" name="nbath" value="5">5
-                        <!-- <input type="text" class="BOx_control" id="bath" name="bath" placeholder="Enter Bath"></input> -->
+
                     </div>
                 </div>
 
                 <div class="column">
-                    <label><b>Enter No of Square Feet</b></label>
+                    <label class="label"><b>Enter No of Square Feet</b></label>
                     <div>
                         <input type="text" class="BOx_control" id="sqft" name="sqft"
                             placeholder="Enter Squae Feet"></input>
@@ -60,36 +62,31 @@
                 </div>
             </div>
         </div>
+    
         <div style="text-align:center">
             <button class="button" onclick="send_data()">Predict</button>
         </div>
+    
     </form>
 
     <br>
+    
     <div class="result_space">
         <h3><span id="prediction"></span></h3>
     </div>
+    
+    
     <div>
-        <script>
-            function form_handler(event) {
-                event.preventDefault();
-            }
-            function send_data() {
-                document.querySelector('form').addEventListener('submit', form_handler);
-                var fd = new FormData(document.querySelector('form'));
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', '/predict', true);
-                document.getElementById("prediction").innerHTML = "Wait For Predicting Price....!";
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == XMLHttpRequest.DONE) {
-                        document.getElementById('prediction').innerHTML = "Prediction = " + xhr.responseText + "₹";
-                    }
-                };
-                xhr.onload = function () { };
-                xhr.send(fd);
-            }
-        </script>
+        <script src="static/javas.js"></script>
     </div>
+
+
+    <div class="footer">
+        <footer>
+            <h3>Written By SaHiL</h3>
+        </footer>
+    </div>
+    
 </body>
 
 </html>
